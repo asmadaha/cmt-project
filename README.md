@@ -64,24 +64,18 @@ The project was developed and testeed on macOS, but is designed to run on the SI
 
 ### Build
 
-From the project root directory: 
-
-gcc -O3 src/c/pd_simulation.c -o bin/pd_simulation -lm
-
-The executable is created in bin/ and is not distribued with the repository. 
-
-### Execute
-
 To ensure reproducible results, the C simulation used a fixed random seed. 
 Running the commands below will regenerate exactly the same CSV files and figures used in the final report. 
 
 The project was developed on macOS and is fully compatible with the SIE Linux VDI. 
 
-From the project root directory, compile thr C simulation. 
+From the project root directory, compile the C simulation. 
 
 gcc -O3 -std=c11 src/c/pd_simulation.c -o bin/pd_simulation
 
-This creates the executable in "bin/". 
+This creates the executable in "bin/".
+
+### Execute 
 
 From the project root still, run the C simulations:
 
@@ -113,6 +107,7 @@ Conceptual inspiration and references are cited in the final report.
 ### Code
 
 The overall structure and implementation were developed specifically for this project.
+
 
 
 
