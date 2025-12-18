@@ -121,8 +121,7 @@ Conceptual inspiration and references are cited in the final report.
 ### Code
 
 The overall structure and implementation were developed specifically for this project.
-
-
+General programming questions I had while working on the C and MATLAB codes were occasionally clarified using the public online resource Stack Overflow and the help of my teaching assistant. 
 
 
 
