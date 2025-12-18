@@ -11,4 +11,4 @@ gcc -O3 -std=c11 src/c/pd_simulation.c -o bin/pd_simulation -lm
 ./bin/pd_simulation 0.10 data/pnoise_0.10.csv
 
 # Run MATLAB analysis (Linux VDI compatible)
-matlab -nodisplay -nosplash -batch "addpath('src/matlab'); analyze_results"
+/usr/local/bin/matlab-2021b -nodisplay -nosplash -batch "addpath('src/matlab'); analyze_results"
