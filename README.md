@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This project develops a computational model to study the evolution of cooperation in a population of interacting agents when interactions are subject to stochstic noise. The system is modeled as a repeated Prisoner's Dilemma played on a fixed network, where agents follow simple behavioral strategies and may make mistakes in executing intended actions.
+This project develops a computational model to study the evolution of cooperation in a population of interacting agents when interactions are subject to stochastic noise. The system is modeled as a repeated Prisoner's Dilemma played on a fixed network, where agents follow simple behavioral strategies and may make mistakes in executing intended actions.
 
 The objective is to quantify how increasing noise levels influence: 
 
@@ -121,6 +121,7 @@ Conceptual inspiration and references are cited in the final report.
 ### Code
 
 The overall structure and implementation were developed specifically for this project.
+
 
 
 
