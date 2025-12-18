@@ -68,6 +68,17 @@ The project was developed on macOS and fully tested on the SIE Ubuntu Linux VDI.
 
 ### Build
 
+The project is designed to be fully reproducible on the SIE Ubuntu Linux VDI.
+
+No manual compilation steps are required from the user.  
+All compilation is handled automatically by the provided Bash script "run.sh".
+
+Internally, the script compiles the C simulation using:
+
+gcc -O3 -std=c11 src/c/pd_simulation.c -o bin/pd_simulation
+
+The compiled executable is placed in the "bin/" directory.
+
 The entire project, including compilation, simulation, data generation, and figure creation, can be reproduced from a single terminal command.
 
 From the project root directory: bash run.sh
@@ -83,7 +94,25 @@ A fixed random seed is used to ensure exact reproducibility of results.
 
 ### Execute 
 
-This command generates the figures used in the report, which are located in "results/figures/". 
+### Execute
+
+The entire workflow (compilation, simulation, and figure generation) is fully automated.
+
+From a terminal running Bash, execute the following commands:
+
+git clone https://github.com/asmadaha/cmt-project.git  
+cd cmt-project  
+bash run.sh
+
+This single command performs the following steps:
+
+1. Compiles the C simulation code.
+2. Runs the simulation for multiple noise values.
+3. Generates CSV output files in the `data/` directory.
+4. Runs MATLAB in non-interactive mode to analyze the data.
+5. Saves all figures to the `results/figures/` directory.
+
+No manual interaction with MATLAB is required.
 
 ## Contributors
 
@@ -100,6 +129,7 @@ Conceptual inspiration and references are cited in the final report.
 ### Code
 
 The overall structure and implementation were developed specifically for this project.
+
 
 
 
