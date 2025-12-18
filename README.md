@@ -36,18 +36,18 @@ Each CSV file contains :
 
 ### Output files
 
-All outputs are generated automatically in the "results/" directory.
+All outputs are generated automatically in the ```"results/"``` directory.
 
-The following figures are produced in "results/figures/":
-  * coop_time_multiple_noise.png : cooperation dynamics over time for all noise levels on a single plot
-  * final_coop_vs_noise.png : final cooperation fraction as a function of noise probability
-  * coop_heatmap_time_noise.png : heatmap showing cooperation dynamics across time and noise levels
+The following figures are produced in ```"results/figures/"```:
+  * ```coop_time_multiple_noise.png``` : cooperation dynamics over time for all noise levels on a single plot
+  * ```final_coop_vs_noise.png``` : final cooperation fraction as a function of noise probability
+  * ```coop_heatmap_time_noise.png``` : heatmap showing cooperation dynamics across time and noise levels
 
 These figures are used directly in the final report. 
 
 ### Report
 
-The final report is located at "docs/report.pdf".
+The final report is located at ```"docs/report.pdf"```.
 
 It follows the required structure:
 1. Deviations from project proposal
@@ -80,7 +80,7 @@ All compilation is handled automatically by the provided Bash script "run.sh".
 Internally, the script compiles the C simulation using:
 ```gcc -O3 -std=c11 src/c/pd_simulation.c -o bin/pd_simulation```
 
-Once the shellscript is run, the compiled executable is placed in the "bin/" directory.
+Once the shellscript is run, the compiled executable is placed in the ```"bin/"``` directory.
 
 A fixed random seed is used in the simulation to ensure exact reproducibility of results.
 
@@ -90,11 +90,12 @@ The entire workflow including compilation, simulation, data generation, and figu
 
 From a terminal running Bash, execute the following commands:
 
-git clone https://github.com/asmadaha/cmt-project.git  
+```git clone https://github.com/asmadaha/cmt-project.git  
 cd cmt-project  
-bash run.sh
+bash run.sh```
 
-This means that, after cloning the repository, from the project root directory, the project is reproducible with a single command: bash run.sh 
+This means that, after cloning the repository, from the project root directory, the project is reproducible with a single command:
+```bash run.sh``` 
 
 This command performs the following steps automatically:
 
@@ -122,6 +123,7 @@ Conceptual inspiration and references are cited in the final report.
 
 The overall structure and implementation were developed specifically for this project.
 General programming questions I had while working on the C and MATLAB codes were occasionally clarified using the public online resource Stack Overflow and the help of my teaching assistant. 
+
 
 
 
