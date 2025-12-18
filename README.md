@@ -38,12 +38,12 @@ Each CSV file contains :
 
 All outputs are generated automatically in the "results/" directory.
 
-Three PNG figures are produced in "results/figures/":
+The following figures are produced in "results/figures/":
   * coop_time_multiple_noise.png : cooperation dynamics over time for all noise levels on a single plot
   * final_coop_vs_noise.png : final cooperation fraction as a function of noise probability
   * coop_heatmap_time_noise.png : heatmap showing cooperation dynamics across time and noise levels
 
-These figures are used in the final report. 
+These figures are used directly in the final report. 
 
 ### Report
 
@@ -61,10 +61,14 @@ It follows the required structure:
 
 ### Dependencies
 
-* GCC
-* MATLAB (available on the SIE Ubuntu Linux VDI)
+This project was developed on macOS and tested for full compatibility on the SIE Ubuntu Linux VDI. 
 
-The project was developed on macOS and fully tested on the SIE Ubuntu Linux VDI. 
+The following software is required: 
+* GCC (C compiler)
+* MATLAB 2021b (available on the SIE Ubuntu Linux VDI)
+* Bash shell
+
+All required software is available on the SIE Ubuntu Linux VDI. 
 
 ### Build
 
@@ -74,29 +78,15 @@ No manual compilation steps are required from the user.
 All compilation is handled automatically by the provided Bash script "run.sh".
 
 Internally, the script compiles the C simulation using:
-
 gcc -O3 -std=c11 src/c/pd_simulation.c -o bin/pd_simulation
 
-The compiled executable is placed in the "bin/" directory.
+Once the shellscript is run, the compiled executable is placed in the "bin/" directory.
 
-The entire project, including compilation, simulation, data generation, and figure creation, can be reproduced from a single terminal command.
-
-From the project root directory: bash run.sh
-
-This automatically:
-* Compiles the C simulation,
-* Runs the simulation for all noise levels,
-* Generates all CSV data files,
-* Executes MATLAB in non-interactive mode,
-* Produces all figures used in the report.
-
-A fixed random seed is used to ensure exact reproducibility of results.
+A fixed random seed is used in the simulation to ensure exact reproducibility of results.
 
 ### Execute 
 
-### Execute
-
-The entire workflow (compilation, simulation, and figure generation) is fully automated.
+The entire workflow including compilation, simulation, data generation, and figure creation is fully automated. 
 
 From a terminal running Bash, execute the following commands:
 
@@ -104,13 +94,15 @@ git clone https://github.com/asmadaha/cmt-project.git
 cd cmt-project  
 bash run.sh
 
-This single command performs the following steps:
+This means that, after cloning the repository, from the project root directory, the project is reproducible with a single command: bash run.sh 
+
+This command performs the following steps automatically:
 
 1. Compiles the C simulation code.
 2. Runs the simulation for multiple noise values.
-3. Generates CSV output files in the `data/` directory.
+3. Generates CSV output files in the "data/" directory.
 4. Runs MATLAB in non-interactive mode to analyze the data.
-5. Saves all figures to the `results/figures/` directory.
+5. Produces and saves all figures to the "results/figures/" directory.
 
 No manual interaction with MATLAB is required.
 
@@ -129,6 +121,7 @@ Conceptual inspiration and references are cited in the final report.
 ### Code
 
 The overall structure and implementation were developed specifically for this project.
+
 
 
 
