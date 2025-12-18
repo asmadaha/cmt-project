@@ -90,9 +90,9 @@ The entire workflow including compilation, simulation, data generation, and figu
 
 From a terminal running Bash, execute the following commands:
 
-```git clone https://github.com/asmadaha/cmt-project.git  
-cd cmt-project  
-bash run.sh```
+```git clone https://github.com/asmadaha/cmt-project.git```  
+```cd cmt-project```  
+```bash run.sh```
 
 This means that, after cloning the repository, from the project root directory, the project is reproducible with a single command:
 ```bash run.sh``` 
@@ -123,6 +123,7 @@ Conceptual inspiration and references are cited in the final report.
 
 The overall structure and implementation were developed specifically for this project.
 General programming questions I had while working on the C and MATLAB codes were occasionally clarified using the public online resource Stack Overflow and the help of my teaching assistant. 
+
 
 
 
