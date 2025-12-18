@@ -61,41 +61,33 @@ It follows the required structure:
 
 ### Dependencies
 
-The project was developed and testeed on macOS, but is designed to run on the SIE Ubuntu Linux VDI. 
+* GCC
+* MATLAB (available on the SIE Ubuntu Linux VDI)
+
+The project was developed on macOS and fully tested on the SIE Ubuntu Linux VDI. 
 
 ### Build
 
-To ensure reproducible results, the C simulation used a fixed random seed. 
-Running the commands below will regenerate exactly the same CSV files and figures used in the final report. 
+The entire project, including compilation, simulation, data generation, and figure creation, can be reproduced from a single terminal command.
 
-The project was developed on macOS and is fully compatible with the SIE Linux VDI. 
+From the project root directory: bash run.sh
 
-From the project root directory, compile the C simulation. 
+This automatically:
+* Compiles the C simulation,
+* Runs the simulation for all noise levels,
+* Generates all CSV data files,
+* Executes MATLAB in non-interactive mode,
+* Produces all figures used in the report.
 
-gcc -O3 -std=c11 src/c/pd_simulation.c -o bin/pd_simulation
-
-This creates the executable in "bin/".
+A fixed random seed is used to ensure exact reproducibility of results.
 
 ### Execute 
-
-From the project root still, run the C simulations:
-
-./bin/pd_simulation 0.00 data/pnoise_0.00.csv
-./bin/pd_simulation 0.01 data/pnoise_0.01.csv
-./bin/pd_simulation 0.02 data/pnoise_0.02.csv
-./bin/pd_simulation 0.05 data/pnoise_0.05.csv
-./bin/pd_simulation 0.10 data/pnoise_0.10.csv
-
-Then run MATLAB analysis:
-
-addpath("src/matlab")
-analyze_results
 
 This command generates the figures used in the report, which are located in "results/figures/". 
 
 ## Contributors
 
-Asma Daha — project design, C implementation, MATLAB analysis, visualization and report writing.
+Asma Daha : project design, C implementation, MATLAB analysis, visualization and report writing.
 
 ## Acknowledgments
 
@@ -108,6 +100,7 @@ Conceptual inspiration and references are cited in the final report.
 ### Code
 
 The overall structure and implementation were developed specifically for this project.
+
 
 
 
