@@ -78,7 +78,7 @@ No manual compilation steps are required from the user.
 All compilation is handled automatically by the provided Bash script "run.sh".
 
 Internally, the script compiles the C simulation using:
-gcc -O3 -std=c11 src/c/pd_simulation.c -o bin/pd_simulation
+```gcc -O3 -std=c11 src/c/pd_simulation.c -o bin/pd_simulation```
 
 Once the shellscript is run, the compiled executable is placed in the "bin/" directory.
 
@@ -122,6 +122,7 @@ Conceptual inspiration and references are cited in the final report.
 
 The overall structure and implementation were developed specifically for this project.
 General programming questions I had while working on the C and MATLAB codes were occasionally clarified using the public online resource Stack Overflow and the help of my teaching assistant. 
+
 
 
 
